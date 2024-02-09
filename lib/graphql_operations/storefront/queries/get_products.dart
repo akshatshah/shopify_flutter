@@ -73,10 +73,8 @@ query($cursor : String, $reverse: Boolean){
         updatedAt
         vendor
         metafields(identifiers: {key: "podlime"}) {
-              id
-              value
-            }
-          }
+          id
+          value
         }
         images(first: 250) {
           edges {
