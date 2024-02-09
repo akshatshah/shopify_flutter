@@ -13,7 +13,7 @@ _$MetafieldImpl _$$MetafieldImplFromJson(Map<String, dynamic> json) =>
       key: json['key'] as String?,
       value: json['value'] as String,
       type: json['type'] as String?,
-      description: json['description'] as String? ?? '',
+      description: json['description'] as String?,
     );
 
 Map<String, dynamic> _$$MetafieldImplToJson(_$MetafieldImpl instance) =>

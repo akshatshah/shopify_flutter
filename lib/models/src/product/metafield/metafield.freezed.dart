@@ -25,7 +25,7 @@ mixin _$Metafield {
   String? get key => throw _privateConstructorUsedError;
   String get value => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
-  String get description => throw _privateConstructorUsedError;
+  String? get description => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -44,7 +44,7 @@ abstract class $MetafieldCopyWith<$Res> {
       String? key,
       String value,
       String? type,
-      String description});
+      String? description});
 }
 
 /// @nodoc
@@ -65,7 +65,7 @@ class _$MetafieldCopyWithImpl<$Res, $Val extends Metafield>
     Object? key = freezed,
     Object? value = null,
     Object? type = freezed,
-    Object? description = null,
+    Object? description = freezed,
   }) {
     return _then(_value.copyWith(
       id: null == id
@@ -88,10 +88,10 @@ class _$MetafieldCopyWithImpl<$Res, $Val extends Metafield>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: null == description
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ) as $Val);
   }
 }
@@ -110,7 +110,7 @@ abstract class _$$MetafieldImplCopyWith<$Res>
       String? key,
       String value,
       String? type,
-      String description});
+      String? description});
 }
 
 /// @nodoc
@@ -129,7 +129,7 @@ class __$$MetafieldImplCopyWithImpl<$Res>
     Object? key = freezed,
     Object? value = null,
     Object? type = freezed,
-    Object? description = null,
+    Object? description = freezed,
   }) {
     return _then(_$MetafieldImpl(
       id: null == id
@@ -152,10 +152,10 @@ class __$$MetafieldImplCopyWithImpl<$Res>
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
               as String?,
-      description: null == description
+      description: freezed == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
     ));
   }
 }
@@ -169,7 +169,7 @@ class _$MetafieldImpl extends _Metafield {
       this.key,
       required this.value,
       this.type,
-      this.description = ''})
+      this.description})
       : super._();
 
   factory _$MetafieldImpl.fromJson(Map<String, dynamic> json) =>
@@ -186,8 +186,7 @@ class _$MetafieldImpl extends _Metafield {
   @override
   final String? type;
   @override
-  @JsonKey()
-  final String description;
+  final String? description;
 
   @override
   String toString() {
@@ -235,7 +234,7 @@ abstract class _Metafield extends Metafield {
       final String? key,
       required final String value,
       final String? type,
-      final String description}) = _$MetafieldImpl;
+      final String? description}) = _$MetafieldImpl;
   _Metafield._() : super._();
 
   factory _Metafield.fromJson(Map<String, dynamic> json) =
@@ -252,7 +251,7 @@ abstract class _Metafield extends Metafield {
   @override
   String? get type;
   @override
-  String get description;
+  String? get description;
   @override
   @JsonKey(ignore: true)
   _$$MetafieldImplCopyWith<_$MetafieldImpl> get copyWith =>
