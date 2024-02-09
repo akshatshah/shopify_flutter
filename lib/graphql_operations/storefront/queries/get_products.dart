@@ -72,6 +72,10 @@ query($cursor : String, $reverse: Boolean){
         title
         updatedAt
         vendor
+        metafields {
+          key
+          value
+        }
         images(first: 250) {
           edges {
             node {
