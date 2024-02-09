@@ -13,7 +13,7 @@ class Metafield with _$Metafield {
     String? key,
     required String value,
     String? type,
-    @Default('') String description,
+    String? description,
   }) = _Metafield;
 
   static Metafield fromGraphJson(Map<String, dynamic> json) {
@@ -23,7 +23,7 @@ class Metafield with _$Metafield {
         namespace: json['namespace'],
         type: json['type'],
         value: json['value'],
-        description: json['description'] ?? '');
+        description: json['description']);
   }
 
   factory Metafield.fromJson(Map<String, dynamic> json) =>
