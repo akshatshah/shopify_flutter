@@ -294,7 +294,7 @@ class Product with _$Product {
     try {
       if (json.containsKey('node')) {
         if (json['node']?['metafields'] == null) return [];
-        return ((json['node']?['metafields']?['edges'] ?? []) as List)
+        return ((json['node']?['metafields'] ?? []) as List)
             .map((v) => Metafield.fromGraphJson(v ?? const {}))
             .toList();
       } else {

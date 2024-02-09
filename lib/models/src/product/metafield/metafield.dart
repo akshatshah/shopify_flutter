@@ -9,10 +9,10 @@ class Metafield with _$Metafield {
 
   factory Metafield({
     required String id,
-    required String namespace,
-    required String key,
-    required String value,
-    required String type,
+    String? namespace,
+    String? key,
+    required int value,
+    String? type,
     @Default('') String description,
   }) = _Metafield;
 

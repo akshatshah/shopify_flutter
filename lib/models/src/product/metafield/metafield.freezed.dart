@@ -21,10 +21,10 @@ Metafield _$MetafieldFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Metafield {
   String get id => throw _privateConstructorUsedError;
-  String get namespace => throw _privateConstructorUsedError;
-  String get key => throw _privateConstructorUsedError;
-  String get value => throw _privateConstructorUsedError;
-  String get type => throw _privateConstructorUsedError;
+  String? get namespace => throw _privateConstructorUsedError;
+  String? get key => throw _privateConstructorUsedError;
+  int get value => throw _privateConstructorUsedError;
+  String? get type => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -40,10 +40,10 @@ abstract class $MetafieldCopyWith<$Res> {
   @useResult
   $Res call(
       {String id,
-      String namespace,
-      String key,
-      String value,
-      String type,
+      String? namespace,
+      String? key,
+      int value,
+      String? type,
       String description});
 }
 
@@ -61,10 +61,10 @@ class _$MetafieldCopyWithImpl<$Res, $Val extends Metafield>
   @override
   $Res call({
     Object? id = null,
-    Object? namespace = null,
-    Object? key = null,
+    Object? namespace = freezed,
+    Object? key = freezed,
     Object? value = null,
-    Object? type = null,
+    Object? type = freezed,
     Object? description = null,
   }) {
     return _then(_value.copyWith(
@@ -72,22 +72,22 @@ class _$MetafieldCopyWithImpl<$Res, $Val extends Metafield>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      namespace: null == namespace
+      namespace: freezed == namespace
           ? _value.namespace
           : namespace // ignore: cast_nullable_to_non_nullable
-              as String,
-      key: null == key
+              as String?,
+      key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
+              as int,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -106,10 +106,10 @@ abstract class _$$MetafieldImplCopyWith<$Res>
   @useResult
   $Res call(
       {String id,
-      String namespace,
-      String key,
-      String value,
-      String type,
+      String? namespace,
+      String? key,
+      int value,
+      String? type,
       String description});
 }
 
@@ -125,10 +125,10 @@ class __$$MetafieldImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? id = null,
-    Object? namespace = null,
-    Object? key = null,
+    Object? namespace = freezed,
+    Object? key = freezed,
     Object? value = null,
-    Object? type = null,
+    Object? type = freezed,
     Object? description = null,
   }) {
     return _then(_$MetafieldImpl(
@@ -136,22 +136,22 @@ class __$$MetafieldImplCopyWithImpl<$Res>
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      namespace: null == namespace
+      namespace: freezed == namespace
           ? _value.namespace
           : namespace // ignore: cast_nullable_to_non_nullable
-              as String,
-      key: null == key
+              as String?,
+      key: freezed == key
           ? _value.key
           : key // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as String,
-      type: null == type
+              as int,
+      type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       description: null == description
           ? _value.description
           : description // ignore: cast_nullable_to_non_nullable
@@ -165,10 +165,10 @@ class __$$MetafieldImplCopyWithImpl<$Res>
 class _$MetafieldImpl extends _Metafield {
   _$MetafieldImpl(
       {required this.id,
-      required this.namespace,
-      required this.key,
+      this.namespace,
+      this.key,
       required this.value,
-      required this.type,
+      this.type,
       this.description = ''})
       : super._();
 
@@ -178,13 +178,13 @@ class _$MetafieldImpl extends _Metafield {
   @override
   final String id;
   @override
-  final String namespace;
+  final String? namespace;
   @override
-  final String key;
+  final String? key;
   @override
-  final String value;
+  final int value;
   @override
-  final String type;
+  final String? type;
   @override
   @JsonKey()
   final String description;
@@ -231,10 +231,10 @@ class _$MetafieldImpl extends _Metafield {
 abstract class _Metafield extends Metafield {
   factory _Metafield(
       {required final String id,
-      required final String namespace,
-      required final String key,
-      required final String value,
-      required final String type,
+      final String? namespace,
+      final String? key,
+      required final int value,
+      final String? type,
       final String description}) = _$MetafieldImpl;
   _Metafield._() : super._();
 
@@ -244,13 +244,13 @@ abstract class _Metafield extends Metafield {
   @override
   String get id;
   @override
-  String get namespace;
+  String? get namespace;
   @override
-  String get key;
+  String? get key;
   @override
-  String get value;
+  int get value;
   @override
-  String get type;
+  String? get type;
   @override
   String get description;
   @override
