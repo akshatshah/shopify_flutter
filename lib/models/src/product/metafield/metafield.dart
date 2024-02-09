@@ -23,7 +23,7 @@ class Metafield with _$Metafield {
         namespace: json['namespace'],
         type: json['type'],
         value: json['value'],
-        description: json['description']);
+        description: json['description'] ?? '');
   }
 
   factory Metafield.fromJson(Map<String, dynamic> json) =>
