@@ -72,11 +72,8 @@ query($cursor : String, $reverse: Boolean){
         title
         updatedAt
         vendor
-        metafields {
-           edges {
-            node {
+        metafields(identifiers: {key: "podlime"}) {
               id
-              key
               value
             }
           }
