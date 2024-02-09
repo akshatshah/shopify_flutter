@@ -72,7 +72,7 @@ query($cursor : String, $reverse: Boolean){
         title
         updatedAt
         vendor
-        metafields(identifiers: {key: "podlime", namespace: ""})  {
+        metafields(identifiers: {key: "podlime", namespace: "custom"})  {
           id
           value
         }
