@@ -73,8 +73,13 @@ query($cursor : String, $reverse: Boolean){
         updatedAt
         vendor
         metafields {
-          key
-          value
+           edges {
+            node {
+              id
+              key
+              value
+            }
+          }
         }
         images(first: 250) {
           edges {
