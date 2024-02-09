@@ -11,7 +11,7 @@ class Metafield with _$Metafield {
     required String id,
     String? namespace,
     String? key,
-    required int value,
+    required String value,
     String? type,
     @Default('') String description,
   }) = _Metafield;

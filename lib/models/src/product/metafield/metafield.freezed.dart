@@ -23,7 +23,7 @@ mixin _$Metafield {
   String get id => throw _privateConstructorUsedError;
   String? get namespace => throw _privateConstructorUsedError;
   String? get key => throw _privateConstructorUsedError;
-  int get value => throw _privateConstructorUsedError;
+  String get value => throw _privateConstructorUsedError;
   String? get type => throw _privateConstructorUsedError;
   String get description => throw _privateConstructorUsedError;
 
@@ -42,7 +42,7 @@ abstract class $MetafieldCopyWith<$Res> {
       {String id,
       String? namespace,
       String? key,
-      int value,
+      String value,
       String? type,
       String description});
 }
@@ -83,7 +83,7 @@ class _$MetafieldCopyWithImpl<$Res, $Val extends Metafield>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -108,7 +108,7 @@ abstract class _$$MetafieldImplCopyWith<$Res>
       {String id,
       String? namespace,
       String? key,
-      int value,
+      String value,
       String? type,
       String description});
 }
@@ -147,7 +147,7 @@ class __$$MetafieldImplCopyWithImpl<$Res>
       value: null == value
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as int,
+              as String,
       type: freezed == type
           ? _value.type
           : type // ignore: cast_nullable_to_non_nullable
@@ -182,7 +182,7 @@ class _$MetafieldImpl extends _Metafield {
   @override
   final String? key;
   @override
-  final int value;
+  final String value;
   @override
   final String? type;
   @override
@@ -233,7 +233,7 @@ abstract class _Metafield extends Metafield {
       {required final String id,
       final String? namespace,
       final String? key,
-      required final int value,
+      required final String value,
       final String? type,
       final String description}) = _$MetafieldImpl;
   _Metafield._() : super._();
@@ -248,7 +248,7 @@ abstract class _Metafield extends Metafield {
   @override
   String? get key;
   @override
-  int get value;
+  String get value;
   @override
   String? get type;
   @override
