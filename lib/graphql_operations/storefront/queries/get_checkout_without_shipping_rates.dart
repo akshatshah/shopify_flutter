@@ -151,6 +151,10 @@ query($id: ID!){
                 title
                 updatedAt
                 vendor
+                metafields(identifiers: {key: "scriptlime", namespace: "custom"})  {
+                  id
+                  value
+                }
                 images(first: 5) {
                   edges {
                     node {
